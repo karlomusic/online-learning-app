@@ -1,26 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header';
+import Landing from './Landing';
+import Footer from './Footer.js';
+import CourseItemsList from './CourseItemsList';
+
+/*Struktura stranice i komponente
+
+		 
+		/
+			APP
+				Header
+				Landing
+				CourseItemsList (map)
+					CourseItem
+					CourseItem
+					CourseItem
+				Footer
+	URL:/ABOUT
+			AboutPage
+				Header
+				About
+				Footer
+	URL:/COURSES
+			CoursesPage
+				Header
+				CourseItemsList (map)
+					CourseItem
+					CourseItem
+					CourseItem
+				Footer
+	URL:/COURS/{courseName}
+			CourseDetailPage
+				Header
+					CourseItemDetailed
+						CourseContentList (map)
+							CourseContent
+				Footer
+	URL:/SIGNIN
+			SignInPage
+				Header
+				LoginForm
+				Footer
+
+*/
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<Landing />
+			<CourseItemsList />
+			<Footer HomeText="Home" FindUsAddress="Find Us Zagreb Croatia" MobilePhone="+38123456798" />
+		</div>
+	);
 }
 
 export default App;
